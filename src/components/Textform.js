@@ -37,10 +37,10 @@ export default function Textform(props) {
                 <div className="container my-2 ">
                     <textarea className={`form-control bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === "light" ? "dark" : "light"}`} onChange={handlechange} value={text} id="textarea" rows="10"></textarea>
                 </div>
-                <button disabled={text.length === 0} className='btn btn-primary mx-2' onClick={handleuppercase}>uppercase</button>
-                <button disabled={text.length === 0} className='btn btn-primary mx-2' onClick={handlelowercase}>lowercase</button>
-                <button disabled={text.length === 0} className='btn btn-primary mx-2' onClick={handlecleartext}>clear</button>
-                <button disabled={text.length === 0} className='btn btn-primary mx-2' onClick={handlecopy}>copy</button>
+                <button disabled={text.length === 0} className='btn btn-primary mx-2 my-2' onClick={handleuppercase}>uppercase</button>
+                <button disabled={text.length === 0} className='btn btn-primary mx-2 my-2' onClick={handlelowercase}>lowercase</button>
+                <button disabled={text.length === 0} className='btn btn-primary mx-2 my-2' onClick={handlecleartext}>clear</button>
+                <button disabled={text.length === 0} className='btn btn-primary mx-2 my-2' onClick={handlecopy}>copy</button>
 
                 <h4 className='my-3'>word count</h4>
                 <p>total words : {text.split(/\s+/).filter((e) => { return e.length !== 0 }).length} </p>
